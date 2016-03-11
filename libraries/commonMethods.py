@@ -16,10 +16,10 @@ def filePathMerger(relativePath):
     try:
         filePath = os.path.dirname(os.path.dirname(os.path.realpath(__file__))) + relativePath.replace('\\', '/')
         print "[DEBUG] " + datePrinter() + " Your system platform is: " + sys.platform
-        print "[DEBUG] " + datePrinter() + " File \'" + relativePath + "\' found!"
         assert os.path.isfile(filePath)
+        print "[DEBUG] " + datePrinter() + " File \'" + relativePath + "\' found!"
         return filePath
-    except:
+    except IOError:
         print "[ERROR] " + datePrinter() + " File: \'" +os.path.dirname(os.path.dirname(os.path.realpath(__file__)))\
               + relativePath + "\' not found! Please verify again."
     else:

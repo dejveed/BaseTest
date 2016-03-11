@@ -1,30 +1,30 @@
 {
   "address": {
-      "line1": "2726 Smith Street",
-      "city": "Hyannis",
-      "postal_code": "02601",
-      "state": "MA",
-      "country": "US"
+      "line1": "",
+      "city": "Krakow",
+      "postal_code": "",
+      "state": "",
+      "country": "PL"
     },
-  "description": "I know him vias Tom",
-  "email": "mark@designservices.com",
-  "facebook": "mjohnson",
-  "fax": "+44-208-1234567",
-  "first_name": "MarkS",
-  "industry": "Design Services",
+  "description": "",
+  "email": "paciadawid@gmail.com",
+  "facebook": "",
+  "fax": "",
+  "first_name": "Dawid",
+  "industry": "",
   "is_organization": false,
-  "last_name": "Johnson",
-  "linkedin": "mjohnson",
-  "mobile": "508-778-6516",
-  "name": "Design Services Company",
-  "organization_name": "Desisgn Services Company",
-  "phone": "508-778-6516",
-  "skype": "mjohnson",
+  "last_name": "Pacia",
+  "linkedin": "dpacia",
+  "mobile": "",
+  "name": "",
+  "organization_name": "Sample name",
+  "phone": "",
+  "skype": "",
   "status": "New",
   "tags": [
     "important"
   ],
-  "title": "CEO",
-  "twitter": "mjohnson",
-  "website": "www.designservices.com"
+  "title": "",
+  "twitter": "",
+  "website": "https://github.com/dejveed/BaseTest"
 }

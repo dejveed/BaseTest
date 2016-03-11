@@ -12,9 +12,9 @@ __author__ = 'Dawid Pacia'
 
 import time
 import unittest
-
 from libraries.leadsServiceLib import leadsServices
 from libraries.commonMethods import filePathMerger
+
 
 class testLeadService(unittest.TestCase):
 
@@ -30,7 +30,7 @@ class testLeadService(unittest.TestCase):
         client.readUserParameter(clientID, "status", toCompare="New")
         client.setParameter(clientID, "status", self.newStatus)
         client.readUserParameter(clientID, "status", toCompare=self.newStatus)
-        client.removeAllLeads()
+        #client.removeAllLeads()
         time.sleep(1) #just to aviod logs mixing
 
     def tearDown(self):

@@ -11,12 +11,15 @@ class leadsServices:
         self.allowedStatus = ['New', 'Working', 'Unqualified']
 
     def createLead(self, fileData, deleteFlag=False, verbose=False):
+        """
+        :param bool deleteFlag: (optional) Remove users with the same first name, second name and company name Default: False.
+        :param bool verbose: (optional) Verbose/debug mode. Default: False.
+        """
         try:
             leadData = loadJsonData(fileData)
             leadList = self.client.leads.list()
         except ValueError as e:
             print "[ERROR] " + datePrinter() + " " + str(e) + ". Check data file!"
-        #remove all already exising lead containg the same first name, last name and company name
         if deleteFlag == True:
             for lead in leadList:
                 try:
@@ -42,6 +45,9 @@ class leadsServices:
 
     #if neccessary -> easy refactor code to read multiple values - dictionaries
     def readUserParameter(self, userID, parameterName, toCompare = None):
+        """
+        :param str toCompare: (optional) Compare with read value. Default: None.
+        """
         try:
             parameterValue = self.client.leads.retrieve(userID)[parameterName]
         except NameError as e:
