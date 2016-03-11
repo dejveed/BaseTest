@@ -1,3 +1,6 @@
 .idea
 *.pyc
 nosetests.xml
+dist
+build
+BaseTest.egg-info
