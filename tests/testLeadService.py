@@ -13,23 +13,24 @@ __author__ = 'Dawid Pacia'
 import time
 import unittest
 
-from common import leadsServiceLib
-
+from libraries.leadsServiceLib import leadsServices
+from libraries.commonMethods import filePathMerger
 
 class testLeadService(unittest.TestCase):
 
     def setUp(self):
         self.authToken = 'c732e3bc1548357f75337c121d9e60965ff6b3511572d7e716878c59611a8875'
         self.newStatus = 'Working'
-        self.firstLeadData = 'leadData.json'
+        self.firstLeadData = filePathMerger("\data\\firstLeadData.json")
+
 
     def testSingleLeadFlow(self):
-        client = leadsServiceLib.leadsServices(authToken=self.authToken)
-        clientID = client.createLead(self.firstLeadData, verbose=False, deleteFlag=True)
+        client = leadsServices(authToken=self.authToken)
+        clientID = client.createLead(self.firstLeadData, verbose=False, deleteFlag=False)
         client.readUserParameter(clientID, "status", toCompare="New")
         client.setParameter(clientID, "status", self.newStatus)
         client.readUserParameter(clientID, "status", toCompare=self.newStatus)
-        #client.removeAllLeads()
+        client.removeAllLeads()
         time.sleep(1) #just to aviod logs mixing
 
     def tearDown(self):
