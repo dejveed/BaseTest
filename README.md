@@ -23,5 +23,4 @@ It could be automated using python script, python builder on Jenkins or exetute 
 TRY:
     Import setuptools library
 IF exception thrown, THAN
-    Make reinstall libraries procedure
-    
+    Make reinstall libraries procedure  
